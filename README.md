@@ -1,8 +1,8 @@
 # DataMining-I-TeamProject
 
 Used algorithms
-- KNN
+- KNN (Tobias)
 - Support Vector Machines
 - Random Forests
 - DecisionTree
-- Naive Bayes
+- Naive Bayes (Marcel)
