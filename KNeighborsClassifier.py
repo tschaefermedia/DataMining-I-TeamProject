@@ -44,7 +44,7 @@ best_estimator = neigh_ins.best_estimator_
 
 best_params = neigh_ins.best_params_
 
-f = open("knn.txt", "w+")
+f = open("knn_results.txt", "w+")
 
 f.write("Best score = {0}".format(best_score))
 f.write("Best estimator = {0}".format(best_estimator))
