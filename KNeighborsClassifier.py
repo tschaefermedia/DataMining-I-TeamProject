@@ -23,6 +23,8 @@ y_train = pd.DataFrame(y_train)
 neighbors = range(1, 32, 2)
 weight = ["uniform", "distance"]
 pp = [1, 2]
+algo = ["auto", "ball_tree", "kd_tree", "brute"]
+metric = ["minkowski", "manhattan", "chebyshev"]
 # all param-val dictionary
 # grid_params_lr = dict('C':[C_regularization], 'penalty':["l1","l2"], 'intercept_scaling':[intercept_scal_vals],
 # 'max_iter':[max_iter_vals], 'solver' :["newton-cg", "llbfgs", "sag"])
@@ -36,6 +38,16 @@ neigh_ins = RandomizedSearchCV(knn, grid_params_nn, cv=10, scoring='f1', n_iter=
 
 neigh_ins.fit(x_train_standard, y_train.values.ravel())
 
-print(neigh_ins.best_score_)
+best_score = neigh_ins.best_score_
 
-print(neigh_ins.best_estimator_)
+best_estimator = neigh_ins.best_estimator_
+
+best_params = neigh_ins.best_params_
+
+f = open("knn.txt", "w+")
+
+f.write("Best score = {0}".format(best_score))
+f.write("Best estimator = {0}".format(best_estimator))
+f.write("Best params = {0}".format(best_params))
+
+f.close()
