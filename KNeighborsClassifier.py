@@ -29,12 +29,12 @@ metric = ["minkowski", "manhattan", "chebyshev"]
 # grid_params_lr = dict('C':[C_regularization], 'penalty':["l1","l2"], 'intercept_scaling':[intercept_scal_vals],
 # 'max_iter':[max_iter_vals], 'solver' :["newton-cg", "llbfgs", "sag"])
 
-grid_params_nn = dict(n_neighbors=neighbors, weights=weight, p=pp)
+grid_params_nn = dict(n_neighbors=neighbors, weights=weight, p=pp, algorithm=algo, metric=metric)
 # creating  grid instance
 # KNeighborsClassifier(n_neighbors=5, weights=’uniform’, algorithm=’auto’, leaf_size=30, p=2)
 knn = KNeighborsClassifier()
 # neigh_grid=GridSearchCV(knn,grid_params_nn,cv=10)
-neigh_ins = RandomizedSearchCV(knn, grid_params_nn, cv=10, scoring='f1', n_iter=64)
+neigh_ins = RandomizedSearchCV(knn, grid_params_nn, cv=10, scoring='f1', n_iter=768, verbose=10, n_jobs=-1)
 
 neigh_ins.fit(x_train_standard, y_train.values.ravel())
 
