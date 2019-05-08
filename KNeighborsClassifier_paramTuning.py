@@ -10,8 +10,10 @@ pp = [1, 2]
 algo = ["auto", "ball_tree", "kd_tree"]
 metric = ["minkowski", "manhattan"]
 
-grid_params_nn = dict(n_neighbors=neighbors, weights=weight, p=pp, algorithm=algo, metric=metric)
 # creating  grid instance
+grid_params_nn = dict(n_neighbors=neighbors, weights=weight, p=pp, algorithm=algo, metric=metric)
+
+# creating KNN instance
 knn = KNeighborsClassifier()
 
 neigh_ins = RandomizedSearchCV(knn, grid_params_nn, cv=10, scoring='f1', n_iter=384, verbose=10, n_jobs=-1)
