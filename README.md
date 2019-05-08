@@ -6,3 +6,4 @@ Used algorithms
 - Support Vector Machines
 - Random Forests
 - DecisionTree
+- Naive Bayes
