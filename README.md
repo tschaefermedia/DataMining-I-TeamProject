@@ -2,7 +2,6 @@
 
 Used algorithms
 - KNN
-- LinearSVC
 - Support Vector Machines
 - Random Forests
 - DecisionTree
