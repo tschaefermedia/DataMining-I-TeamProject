@@ -102,3 +102,4 @@ fabric.properties
 
 # End of https://www.gitignore.io/api/pycharm,jupyternotebook,jupyternotebooks
 .idea/
+__pycache__/

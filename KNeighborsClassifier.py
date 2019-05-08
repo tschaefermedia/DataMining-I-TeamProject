@@ -1,53 +1,38 @@
-import pandas as pd
-import numpy as np
-from sklearn import preprocessing
-from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.model_selection import GridSearchCV
-from sklearn.model_selection import RandomizedSearchCV
+import functions
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score
+import pandas as pd
 
-data_processed = pd.read_csv("data/credit_train_processed.csv", index_col=0)
+X, y = functions.get_data()
 
-x_train, y_train = data_processed.drop(columns='Loan Status'), data_processed['Loan Status']
+# split dataset into train and test data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=10)
 
-min_max_scaler = preprocessing.MinMaxScaler()
-standard = StandardScaler()
+# Create KNN classifier
+knn = KNeighborsClassifier(algorithm='ball_tree', leaf_size=30, metric='minkowski',
+                           metric_params=None, n_jobs=None, n_neighbors=17, p=1,
+                           weights='uniform')
+# Fit the classifier to the data
+knn.fit(X_train, y_train.values.ravel())
 
-x_train['Term'] = x_train['Term'].astype('float64')
-x_train_standard = pd.DataFrame(standard.fit_transform(x_train), columns=x_train.columns)
-x_train_minmax = pd.DataFrame(min_max_scaler.fit_transform(x_train), columns=x_train.columns)
+y_pred = knn.predict(X_test)
 
-y_train = pd.DataFrame(y_train)
+f1 = f1_score(y_test, y_pred, average='weighted')
 
-# param values
-neighbors = range(1, 32, 2)
-weight = ["uniform", "distance"]
-pp = [1, 2]
-algo = ["auto", "ball_tree", "kd_tree", "brute"]
-metric = ["minkowski", "manhattan", "chebyshev"]
-# all param-val dictionary
-# grid_params_lr = dict('C':[C_regularization], 'penalty':["l1","l2"], 'intercept_scaling':[intercept_scal_vals],
-# 'max_iter':[max_iter_vals], 'solver' :["newton-cg", "llbfgs", "sag"])
+print("F1 score is = {0}".format(f1))
 
-grid_params_nn = dict(n_neighbors=neighbors, weights=weight, p=pp, algorithm=algo, metric=metric)
-# creating  grid instance
-# KNeighborsClassifier(n_neighbors=5, weights=’uniform’, algorithm=’auto’, leaf_size=30, p=2)
-knn = KNeighborsClassifier()
-# neigh_grid=GridSearchCV(knn,grid_params_nn,cv=10)
-neigh_ins = RandomizedSearchCV(knn, grid_params_nn, cv=10, scoring='f1', n_iter=768, verbose=10, n_jobs=-1)
-
-neigh_ins.fit(x_train_standard, y_train.values.ravel())
-
-best_score = neigh_ins.best_score_
-
-best_estimator = neigh_ins.best_estimator_
-
-best_params = neigh_ins.best_params_
-
-f = open("knn_results.txt", "w+")
-
-f.write("Best score = {0}".format(best_score))
-f.write("Best estimator = {0}".format(best_estimator))
-f.write("Best params = {0}".format(best_params))
-
+f = open("results/files/knn_results.txt", "w+")
+f.write("Final F1 score = {0} \n".format(f1))
 f.close()
+
+result = pd.DataFrame(y_pred, columns=["y_pred"])
+
+result['y_test'] = y_test["Loan Status"].values
+
+result.reset_index(drop=True, inplace=True)
+X_test.reset_index(drop=True, inplace=True)
+
+result = pd.concat([result, X_test], axis=1)
+
+result.to_csv("results/datasets/knn_y_pred.csv")
