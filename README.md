@@ -1,13 +1,5 @@
 # DataMining-I-TeamProject
 
-Used algorithms
-- KNN (Tobias)
-- Support Vector Machines
-- Random Forests
-- DecisionTree
-- Naive Bayes (Marcel)
-
-
 # Tasks
 Content Table for Report:
 1. Application area and goals (Yen-Chun)
@@ -16,16 +8,16 @@ Content Table for Report:
 	• describe different approaches and parameter settings that you tried (Everyone for his classifier/algo)  
 	• including evaluation setup and evaluation results (Everyone for his classifier/algo)  
 	• including discussion of the results (Everyone for his classifier/algo)  
-4. Summary of Results (Person Y)  
-5. Conclusion (Person Y)  
+4. Summary of Results (Ting-Yi)  
+5. Conclusion (Ting-Yi)  
 
-Formatting of paper in latex template and also make sure all requirements are met (Person Y).  
+Formatting of paper in latex template and also make sure all requirements are met (Ting-Yi).  
 
 
 ALgorithms:
 - KNN (Tobias)
-- Support Vector Machines (Person W)
-- Random Forests (Karan)
+- Support Vector Machines (Karan)
+- Random Forests (Charlene)
 - DecisionTree (Tobias)
 - Naive Bayes (Marcel)
 
