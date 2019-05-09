@@ -31,11 +31,12 @@ ALgorithms:
 
 
 
-The finished scrpits for KNN must be used as a template for every algorithm
+The finished scrpits for KNN must be used as a template for every algorithm  
 --> Meaning loading the data and saving it have to be as they are in the follwing files:
+	
 	KNeighborsClassifier_paramTuning.ipynb
  
 	KNeighborsClassifier.ipynb
-
-Why does that make sense? 
+  
+Why does that make sense?   
 --> Less work for Person Y and more transparency on the results. Plus a better comparability
