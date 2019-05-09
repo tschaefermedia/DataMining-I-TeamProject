@@ -25,7 +25,7 @@ Formatting of paper in latex template and also make sure all requirements are me
 ALgorithms:
 - KNN (Tobias)
 - Support Vector Machines (Person W)
-- Random Forests (Person Z)
+- Random Forests (Karan)
 - DecisionTree (Tobias)
 - Naive Bayes (Marcel)
 
