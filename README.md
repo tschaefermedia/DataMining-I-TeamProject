@@ -10,8 +10,8 @@ Used algorithms
 
 # Tasks
 Content Table for Report:
-1. Application area and goals (Person X)
-2. Structure and size of the data set (minimum 1 page, see kaggle Kernel), Graphs (Person X)
+1. Application area and goals (Yen-Chun)
+2. Structure and size of the data set (minimum 1 page, see kaggle Kernel), Graphs (Yen-Chun)
 3. Preprocessing and Mining  
 	• describe different approaches and parameter settings that you tried (Everyone for his classifier/algo)  
 	• including evaluation setup and evaluation results (Everyone for his classifier/algo)  
