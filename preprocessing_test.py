@@ -29,26 +29,39 @@ plt.figure(figsize=(20, 20))
 sns.heatmap(df.corr(), annot=True, fmt=".2f")
 plt.show()
 
-# removing string data from column to make it float type
-df = df.replace({'Years in current job': '[A-Za-z+<>]'}, ' ', regex=True)
+# # removing string data from column to make it float type
+mapping_dict = {'8 years': 8, '10+ years': 10, '3 years': 3, '5 years': 5, '< 1 year': 0, '2 years': 2,
+                '4 years': 4, '9 years': 9, '7 years': 7, '1 year': 1, '6 years': 6, 'n/a': np.nan}
 
-# changing object value to float
-df['Years in current job'] = df['Years in current job'].astype(np.float64)
 
-# Finding the median value in the rspective columns
+def f(x):
+    try:
+        return mapping_dict[x]
+    except:
+        return x
 
-credit_score_median = df['Credit Score'].median()
-Annual_Income_median = df['Annual Income'].median()
-Years_in_current_job_median = df['Years in current job'].median()
 
-# fill NaN values
-df['Credit Score'].fillna(credit_score_median, inplace=True)
-df['Annual Income'].fillna(Annual_Income_median, inplace=True)
-df['Years in current job'].fillna(Years_in_current_job_median, inplace=True)
-df['Months since last delinquent'].fillna(0, inplace=True)
-df['Maximum Open Credit'].fillna(df['Maximum Open Credit'].median(), inplace=True)
-df['Bankruptcies'].fillna(0, inplace=True)
-df['Tax Liens'].fillna(0, inplace=True)
+df['Years in current job'] = df['Years in current job'].apply(f).astype(np.float64)
+
+
+# Finding the median value in the respective columns
+def cs(i):
+    if i > 1000:
+        i = i / 10
+        return (i)
+    else:
+        return (i)
+
+
+df['Credit Score'] = df['Credit Score'].apply(cs)
+
+df['Credit Score'].fillna(value=df.groupby('Home Ownership')['Credit Score'].transform('median'), inplace=True)
+df['Annual Income'].fillna(value=df.groupby('Purpose')['Annual Income'].transform('median'), inplace=True)
+df['Years in current job'].fillna(value=df.groupby('Home Ownership')['Years in current job'].transform('median'), inplace=True)
+df['Months since last delinquent'].fillna(0,inplace=True)
+df['Maximum Open Credit'].fillna(value=df.groupby('Home Ownership')['Maximum Open Credit'].transform('median'),inplace=True)
+df['Bankruptcies'].fillna(0,inplace=True)
+df['Tax Liens'].fillna(0,inplace=True)
 
 df.info()
 
