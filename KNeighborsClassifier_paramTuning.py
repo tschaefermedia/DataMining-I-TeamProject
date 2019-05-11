@@ -11,7 +11,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random
 neighbors = range(1, 32, 2)
 weight = ["uniform", "distance"]
 pp = [1, 2]
-algo = ["auto", "ball_tree", "kd_tree"]
+algo = ["auto"]
 metric = ["minkowski", "manhattan"]
 
 # creating  grid instance
