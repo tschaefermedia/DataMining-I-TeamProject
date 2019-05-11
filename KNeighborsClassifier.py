@@ -7,12 +7,12 @@ import pandas as pd
 X, y = functions.get_data()
 
 # split dataset into train and test data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=10)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=10)
 
 # Create KNN classifier
-knn = KNeighborsClassifier(algorithm='ball_tree', leaf_size=30, metric='minkowski',
-                           metric_params=None, n_jobs=None, n_neighbors=17, p=1,
-                           weights='uniform')
+knn = KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                           metric_params=None, n_jobs=None, n_neighbors=21, p=2,
+                           weights='distance')
 # Fit the classifier to the data
 knn.fit(X_train, y_train.values.ravel())
 
