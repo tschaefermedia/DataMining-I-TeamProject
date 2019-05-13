@@ -53,6 +53,21 @@ def cs(i):
         return (i)
 
 
+# adding CreditRatio as new feature
+def mi(row):
+    ai = row["Annual Income"]
+    md = row["Monthly Debt"]
+
+    mr = ai / 12 - md
+    return mr
+
+
+def cr(row):
+    cla = row["Current Loan Amount"]
+    ai = row["Annual Income"]
+    return cla / ai
+
+
 df['Credit Score'] = df['Credit Score'].apply(cs)
 
 # #fill NaN values groupby more related column
@@ -65,6 +80,9 @@ df['Maximum Open Credit'].fillna(value=df.groupby('Home Ownership')['Maximum Ope
                                  inplace=True)
 df['Bankruptcies'].fillna(0, inplace=True)
 df['Tax Liens'].fillna(0, inplace=True)
+
+df["Monthly Income"] = df.apply(lambda row: mi(row), axis=1)
+df["Credit Ration per Year"]= df.apply(lambda row: cr(row), axis=1)
 
 df.info()
 
@@ -117,3 +135,7 @@ df.head(20)
 df_final = df.reset_index(drop=True).merge(encoded.reset_index(drop=True), left_index=True, right_index=True)
 
 df_final.to_csv(data_folder + "/" + dataset + "_processed" + file_type)
+
+plt.figure(figsize=(20, 20))
+sns.heatmap(df.corr(), annot=True, fmt=".2f")
+plt.show()
