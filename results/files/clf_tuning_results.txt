@@ -1,8 +1,8 @@
-Best score = 0.8861596151066796 
-Best estimator = DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=4,
-            max_features='auto', max_leaf_nodes=None,
+Best score = 0.7957609202976141 
+Best estimator = DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=6,
+            max_features='sqrt', max_leaf_nodes=None,
             min_impurity_decrease=0.0, min_impurity_split=None,
-            min_samples_leaf=1, min_samples_split=14,
+            min_samples_leaf=1, min_samples_split=6,
             min_weight_fraction_leaf=0.0, presort=False, random_state=None,
-            splitter='random') 
-Best params = {'criterion': 'entropy', 'max_depth': 4, 'max_features': 'auto', 'min_samples_split': 14, 'splitter': 'random'} 
+            splitter='best') 
+Best params = {'criterion': 'gini', 'max_depth': 6, 'max_features': 'sqrt', 'min_samples_split': 6, 'splitter': 'best'} 

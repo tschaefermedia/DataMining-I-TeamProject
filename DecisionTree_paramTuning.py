@@ -5,9 +5,9 @@ from sklearn.model_selection import GridSearchCV
 x_train, y_train = functions.get_data()
 
 criterion = ['gini', 'entropy']
-max_depth = list(range(1, 21, 1)) + list(range(20, 210, 10))
+max_depth = list(range(1, 21, 1)) + list(range(20, 110, 10))
 splitter = ['best', 'random']
-min_samples_split = list(range(2, 50, 2))
+min_samples_split = list(range(2, 16, 2))
 max_features = ['auto', 'sqrt', 'log2', None]
 
 params = dict(criterion=criterion, max_depth=max_depth, splitter=splitter, min_samples_split=min_samples_split,
@@ -15,7 +15,7 @@ params = dict(criterion=criterion, max_depth=max_depth, splitter=splitter, min_s
 
 clf = DecisionTreeClassifier()
 
-clfCV = GridSearchCV(clf, params, cv=10, scoring='f1', verbose=10, n_jobs=-1)
+clfCV = GridSearchCV(clf, params, cv=10, scoring='accuracy', verbose=10, n_jobs=-1)
 
 clfCV.fit(x_train, y_train.values.ravel())
 

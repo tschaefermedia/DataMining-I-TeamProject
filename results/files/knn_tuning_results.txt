@@ -1,5 +1,5 @@
-Best score = 0.9126435089360913 
+Best score = 0.7955119522641578 
 Best estimator = KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
-           metric_params=None, n_jobs=None, n_neighbors=21, p=2,
-           weights='distance') 
-Best params = {'p': 2, 'n_neighbors': 21, 'weights': 'distance', 'algorithm': 'auto', 'metric': 'minkowski'} 
+           metric_params=None, n_jobs=None, n_neighbors=100, p=2,
+           weights='uniform') 
+Best params = {'algorithm': 'auto', 'metric': 'minkowski', 'n_neighbors': 100, 'p': 2, 'weights': 'uniform'} 

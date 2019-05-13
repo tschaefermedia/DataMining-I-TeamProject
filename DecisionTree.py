@@ -15,7 +15,7 @@ clf.fit(X_train, y_train.values.ravel())
 
 y_pred = clf.predict(X_test)
 
-f1 = f1_score(y_test, y_pred, average='weighted')
+f1 = f1_score(y_test, y_pred, average='binary')
 
 print("F1 score is = {0}".format(f1))
 
