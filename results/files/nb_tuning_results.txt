@@ -1,3 +1,4 @@
-Best score = 0.7885127529308404 
-Best estimator = BernoulliNB(alpha=1.0, binarize=0.0, class_prior=None, fit_prior=True) 
-Best params = {} 
+Best score = 0.879522798909478 
+Best estimator = BernoulliNB(alpha=0.01, binarize=0.0, class_prior=None,
+      fit_prior=[True, False]) 
+Best params = {'fit_prior': [True, False], 'alpha': 0.01} 
