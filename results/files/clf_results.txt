@@ -1,1 +1,5 @@
-Final F1 score = 0.8832612723903643 
+Basic CLF: F1 score = 0.340041928721174 
+Basic CLF without outliers: F1 score = 0.33932422717469446 
+Basic clf with PCA features: F1 score = 0.9981711034342614 
+Basic CLF with FT features: F1 score = 0.31026355260338545 
+Basic CLF with polynomial features: F1 score = 0.31959629941127 
