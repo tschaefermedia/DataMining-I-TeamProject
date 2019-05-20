@@ -1,1 +1,5 @@
-Final F1 score = 0.7290512586583276 
+Basic BNB: F1 score = 0.13706102966246167 
+Basic BNB without outliers: F1 score = 0.13550135501355012 
+Basic BNB with PCA features: F1 score = 0.8794612794612795 
+Basic BNB with FT features: F1 score = 0.3770600965540203 
+Basic BNB with polynomial features: F1 score = 0.3647163647163647 

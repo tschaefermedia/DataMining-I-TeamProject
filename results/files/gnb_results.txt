@@ -1,1 +1,5 @@
-Final F1 score = 0.33908994632726874 
+Basic GNB: F1 score = 0.38048393494644983 
+Basic GNB without outliers: F1 score = 0.3857913669064748 
+Basic GNB with PCA features: F1 score = 0.7203087885985748 
+Basic GNB with FT features: F1 score = 0.37717434081070444 
+Basic GNB with polynomial features: F1 score = 0.38119122257053284 
