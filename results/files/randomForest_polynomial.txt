@@ -1,4 +1,9 @@
-Final F1 Score = 0.8758184671104569 
-Training Accuracy = 0.9997131500225382 
-Testing Accuracy = 0.8887687188019967 
-AUC = 0.7453667242301061 
+n_estimators = 50 
+max_depth = 34 
+max_features = 1 
+min_samples_leaf = 1 
+-------------------------------------------------------
+Final F1 Score = 0.876422327391071 
+Training Accuracy = 0.9997541285907471 
+Testing Accuracy = 0.8889351081530782 
+AUC = 0.7476043149335422 
