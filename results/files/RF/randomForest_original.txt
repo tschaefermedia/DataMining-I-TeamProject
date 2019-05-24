@@ -1,0 +1,17 @@
+Dataset: original_dataset_credit_score_corrected.csv
+algorithm: RandomForest
+sampling: Yes
+normalization: Yes
+extracting new features: No
+-------------------------------------------------------
+[ hyper-para ]
+n_estimators = 50 
+max_depth = 50 
+max_features = 1 
+min_samples_leaf = 1 
+-------------------------------------------------------
+[ evaluation ]
+Final F1 Score = 0.9095023544372938 
+Training Accuracy = 0.9999180428635823 
+Testing Accuracy = 0.9175540765391015 
+AUC = <function auc at 0x1a1e658378> 
