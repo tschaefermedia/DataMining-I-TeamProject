@@ -1,0 +1,34 @@
+Dataset: credit_train_processed__polynomial_new.csv
+algorithm: RandomForest
+sampling: Yes
+normalization: Yes
+extracting new features: poly
+-------------------------------------------------------
+[ hyper-para ]
+n_estimators = 50 
+max_depth = 50 
+max_features = 1 
+min_samples_leaf = 1 
+-------------------------------------------------------
+[ evaluation ]
+Final F1 Score = 0.9020197428948631 
+Training Accuracy = 0.9996535746763089 
+Testing Accuracy = 0.912967032967033 
+AUC = 0.745367501985034 
+-------------------------------------------------------
+Feature ranking:
+1. Credit Ration per Year (0.082449)
+2. Monthly Income Credit Ration per Year (0.082396)
+3. Current Loan Amount^2 (0.082274)
+4. Current Loan Amount Credit Ration per Year (0.081832)
+5. Current Loan Amount (0.081262)
+6. Credit Ration per Year^2 (0.080666)
+7. Monthly Debt Credit Ration per Year (0.080496)
+8. Annual Income Credit Ration per Year (0.080078)
+9. Monthly Income (0.079722)
+10. Annual Income (0.079241)
+11. Credit Score (0.061555)
+12. Credit Score^2 (0.060353)
+13. Term Credit Score (0.059943)
+14. Term^2 (0.004210)
+15. Term (0.003522)

@@ -6,12 +6,35 @@ extracting new features: No
 -------------------------------------------------------
 [ hyper-para ]
 n_estimators = 50 
-max_depth = 50 
-max_features = 1 
+max_depth = 38 
+max_features = 21 
 min_samples_leaf = 1 
 -------------------------------------------------------
 [ evaluation ]
-Final F1 Score = 0.9095023544372938 
-Training Accuracy = 0.9999180428635823 
-Testing Accuracy = 0.9175540765391015 
-AUC = <function auc at 0x1a1e658378> 
+Final F1 Score = 0.9043306477183733 
+Training Accuracy = 0.9996102715108475 
+Testing Accuracy = 0.9154285714285715 
+AUC = 0.7470551568778421 
+-------------------------------------------------------
+Feature ranking:
+1. Current Loan Amount (0.144240)
+2. Annual Income (0.114318)
+3. Monthly Debt (0.106723)
+4. Years of Credit History (0.098253)
+5. Maximum Open Credit (0.097169)
+6. Credit Score (0.095351)
+7. Current Credit Balance (0.092852)
+8. Months since last delinquent (0.088109)
+9. Number of Open Accounts (0.060641)
+10. Years in current job (0.041829)
+11. Home Ownership_Rent (0.008975)
+12. Number of Credit Problems (0.008184)
+13. Home Ownership_Home Mortgage (0.007280)
+14. Bankruptcies (0.006785)
+15. Purpose_Other (0.005370)
+16. Purpose_Debt Consolidation (0.005298)
+17. Home Ownership_Own Home (0.005264)
+18. Term_Short Term (0.004557)
+19. Term_Long Term (0.004325)
+20. Tax Liens (0.004144)
+21. Home Ownership_HaveMortgage (0.000333)

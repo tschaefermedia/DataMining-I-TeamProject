@@ -1,0 +1,34 @@
+Dataset: credit_train_processed__FTs_new.csv
+algorithm: RandomForest
+sampling: Yes
+normalization: Yes
+extracting new features: FTs
+-------------------------------------------------------
+[ hyper-para ]
+n_estimators = 50 
+max_depth = 50 
+max_features = 1 
+min_samples_leaf = 1 
+-------------------------------------------------------
+[ evaluation ]
+Final F1 Score = 0.8769958606260919 
+Training Accuracy = 0.9975317195687005 
+Testing Accuracy = 0.8816703296703297 
+AUC = 0.743372693149828 
+-------------------------------------------------------
+Feature ranking:
+1. Credit Score + Current Loan Amount (0.177404)
+2. Current Loan Amount + Term (0.070459)
+3. Current Loan Amount / Purpose_vacation (0.059840)
+4. Current Loan Amount / Purpose_wedding (0.059635)
+5. Current Loan Amount / Purpose_moving (0.058978)
+6. 1 / Current Loan Amount (0.058525)
+7. Current Loan Amount / Home Ownership_HaveMortgage (0.058371)
+8. Current Loan Amount / Purpose_Buy House (0.058044)
+9. Current Loan Amount / Purpose_Take a Trip (0.057992)
+10. Current Loan Amount (0.057815)
+11. Current Loan Amount / Purpose_small_business (0.057584)
+12. Current Loan Amount / Purpose_Educational Expenses (0.057133)
+13. Current Loan Amount / Purpose_major_purchase (0.057130)
+14. 0 - Current Loan Amount (0.056678)
+15. Current Loan Amount / Purpose_renewable_energy (0.054411)
