@@ -1,0 +1,1 @@
+Basic Bernoulli NaiveBayes with PCA features: Average recall score: 0.97Basic Bernoulli NaiveBayes with PCA features: Average precision score: 0.97Basic Bernoulli NaiveBayes with PCA features: Average precision-recall score: 0.86

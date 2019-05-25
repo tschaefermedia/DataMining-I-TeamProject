@@ -1,1 +1,8 @@
-Final F1 score = 0.7290512586583276 
+Basic Bernoulli NaiveBayes without outliers: F1 score = 0.0014556040756914118 
+Basic Bernoulli NaiveBayes with PCA features: F1 score = 0.9137931034482759 
+Basic Bernoulli NaiveBayes with FT features: F1 score = 0.3110720562390158 
+Basic Bernoulli NaiveBayes with polynomial features: F1 score = 0.26530031312268715 
+Basic Bernoulli NaiveBayes without outliers: F1 score = 0.0014556040756914118 
+Basic Bernoulli NaiveBayes with PCA features: F1 score = 0.9137931034482759 
+Basic Bernoulli NaiveBayes with FT features: F1 score = 0.3110720562390158 
+Basic Bernoulli NaiveBayes with polynomial features: F1 score = 0.26530031312268715 

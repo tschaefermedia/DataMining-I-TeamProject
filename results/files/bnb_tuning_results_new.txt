@@ -1,0 +1,2 @@
+Best score = 0.9762184617056605 
+Best params = {'fit_prior': False, 'alpha': 0.15789473684210525} 
