@@ -1,8 +1,2 @@
-Best score = 0.8861596151066796 
-Best estimator = DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=4,
-            max_features='auto', max_leaf_nodes=None,
-            min_impurity_decrease=0.0, min_impurity_split=None,
-            min_samples_leaf=1, min_samples_split=14,
-            min_weight_fraction_leaf=0.0, presort=False, random_state=None,
-            splitter='random') 
-Best params = {'criterion': 'entropy', 'max_depth': 4, 'max_features': 'auto', 'min_samples_split': 14, 'splitter': 'random'} 
+Best score = 0.9999000303061278 
+Best params = {'splitter': 'random', 'criterion': 'entropy', 'max_features': None, 'min_samples_split': 12, 'max_depth': 30} 
