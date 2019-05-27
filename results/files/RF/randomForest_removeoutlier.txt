@@ -1,0 +1,55 @@
+Dataset: credit_train_processed__removeoutliers_new.csv
+algorithm: RandomForest
+sampling: Yes
+normalization: Yes
+extracting new features: no
+-------------------------------------------------------
+[ hyper-para ]
+n_estimators = 50 
+max_depth = 50 
+max_features = 1 
+min_samples_leaf = 1 
+-------------------------------------------------------
+[ evaluation ]
+Final F1 Score = 0.9021289401392196 
+Training Accuracy = 0.999833748960931 
+Testing Accuracy = 0.9113411341134113 
+AUC = 0.7902342030186017 
+-------------------------------------------------------
+Feature ranking:
+1. Current Loan Amount (0.094119)
+2. Credit Ration per Year (0.092525)
+3. Credit Score (0.084118)
+4. Monthly Income (0.083702)
+5. Monthly Debt (0.082413)
+6. Annual Income (0.081911)
+7. Maximum Open Credit (0.080992)
+8. Years of Credit History (0.079794)
+9. Current Credit Balance (0.079357)
+10. Months since last delinquent (0.075802)
+11. Number of Open Accounts (0.062346)
+12. Years in current job (0.045211)
+13. Term (0.013349)
+14. Number of Credit Problems (0.006727)
+15. Purpose_Debt Consolidation (0.005011)
+16. Home Ownership_Home Mortgage (0.004308)
+17. Home Ownership_Rent (0.004090)
+18. Tax Liens (0.003460)
+19. Home Ownership_Own Home (0.003070)
+20. Purpose_other (0.002943)
+21. Purpose_Home Improvements (0.002656)
+22. Purpose_Other (0.002179)
+23. Purpose_Medical Bills (0.001929)
+24. Purpose_Business Loan (0.001846)
+25. Purpose_Buy a Car (0.001778)
+26. Purpose_Buy House (0.001110)
+27. Purpose_Take a Trip (0.000687)
+28. Purpose_major_purchase (0.000646)
+29. Purpose_small_business (0.000559)
+30. Purpose_moving (0.000356)
+31. Purpose_vacation (0.000289)
+32. Purpose_wedding (0.000265)
+33. Purpose_Educational Expenses (0.000244)
+34. Home Ownership_HaveMortgage (0.000198)
+35. Purpose_renewable_energy (0.000013)
+36. Bankruptcies (0.000000)

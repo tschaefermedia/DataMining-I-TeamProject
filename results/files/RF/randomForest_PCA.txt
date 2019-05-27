@@ -1,0 +1,17 @@
+Dataset: credit_train_processed__PCA_new.csv
+algorithm: RandomForest
+sampling: Yes
+normalization: Yes
+extracting new features: PCA
+-------------------------------------------------------
+[ hyper-para ]
+n_estimators = 22 
+max_depth = 48 
+max_features = 5 
+min_samples_leaf = 87 
+-------------------------------------------------------
+[ evaluation ]
+Final F1 Score = 0.9995604888714104 
+Training Accuracy = 0.9998700905036159 
+Testing Accuracy = 0.9995604395604396 
+AUC = 0.9992898239936481 

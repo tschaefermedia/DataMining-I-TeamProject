@@ -1,0 +1,9 @@
+n_estimators = 33 
+max_depth = 20 
+max_features = 8 
+min_samples_leaf = 7 
+-------------------------------------------------------
+Final F1 Score = 0.9998336359866319 
+Training Accuracy = 0.9999590214317912 
+Testing Accuracy = 0.9998336106489185 
+AUC = 0.9998955722639934 
